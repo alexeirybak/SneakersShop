@@ -1,6 +1,5 @@
 <script setup>
-
-defineProps({
+const props = defineProps({
   id: Number,
   title: String,
   imageUrl: String,
@@ -11,7 +10,7 @@ defineProps({
   onClickFavourite: Function
 })
 
-
+const visibleFavouriteButton = Boolean(props.onClickAdd)
 </script>
 
 <template>
@@ -19,6 +18,7 @@ defineProps({
     class="relative bg-white border-slate-100 rounded-3xl p-8 cursor-pointer hover:-translate-y-2 hover:shadow-xl transition"
   >
     <img
+      v-if="onClickFavourite"
       :src="!isFavourite ? '/like-2.svg' : '/like-1.svg'"
       alt="Like 1"
       class="absolute top-8 left-8"
@@ -32,7 +32,12 @@ defineProps({
         <span class="text-slate-400">Цена:</span>
         <span>{{ price }} руб.</span>
       </div>
-      <img @click="onClickAdd" :src="isAdded ? '/checked.svg' : '/plus.svg'" alt="Plus" />
+      <img
+        v-if="onClickAdd"
+        @click="onClickAdd"
+        :src="isAdded ? '/checked.svg' : '/plus.svg'"
+        alt="Plus"
+      />
     </div>
   </div>
 </template>
