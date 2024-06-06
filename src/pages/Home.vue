@@ -120,7 +120,7 @@ watch(filters, fetchItems)
 </script>
 
 <template>
-  <img src="/sneakers-shop.jpg" alt="Магазин кроссовок" class="w-full mb-10 rounded-[20px]">
+  <img src="/sneakers-shop.jpg" alt="Магазин кроссовок" class="w-full mb-10 rounded-[30px]">
   <div class="flex flex-row flex-wrap justify-center lg:justify-between items-center gap-10">
     <h2 class="text-3xl font-bold">Все кроссовки</h2>
     <div class="flex flex-row flex-wrap gap-4 justify-center">
