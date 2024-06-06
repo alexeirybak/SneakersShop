@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   id: Number,
   title: String,
   imageUrl: String,
@@ -10,12 +10,11 @@ const props = defineProps({
   onClickFavourite: Function
 })
 
-const visibleFavouriteButton = Boolean(props.onClickAdd)
 </script>
 
 <template>
   <div
-    class="relative bg-white border-slate-100 rounded-3xl p-8 cursor-pointer hover:-translate-y-2 hover:shadow-xl transition"
+    class="flex flex-col justify-between w-[280px] relative bg-white border-slate-100 rounded-3xl p-4 lg:p-8 cursor-pointer hover:shadow-xl transition"
   >
     <img
       v-if="onClickFavourite"

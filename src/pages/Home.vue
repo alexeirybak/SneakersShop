@@ -120,19 +120,20 @@ watch(filters, fetchItems)
 </script>
 
 <template>
-  <div class="flex justify-between items-center">
-    <h2 class="text-3xl font-bold mb-8">Все кроссовки</h2>
-    <div class="flex gap-4">
-      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none">
+  <img src="/sneakers-shop.jpg" alt="Магазин кроссовок" class="w-full mb-10 rounded-[20px]">
+  <div class="flex flex-row flex-wrap justify-center lg:justify-between items-center gap-10">
+    <h2 class="text-3xl font-bold">Все кроссовки</h2>
+    <div class="flex flex-row flex-wrap gap-4 justify-center">
+      <select @change="onChangeSelect" class="py-2 px-3 border rounded-md outline-none w-[200px]">
         <option value="name">По названию</option>
         <option value="price">По цене (дешевые)</option>
         <option value="-price">По цене (дорогие)</option>
       </select>
-      <div class="relative">
-        <img class="absolute left-4 top-4" src="/search.svg" alt="Поиск" />
+      <div class="relative ">
+        <img class="absolute left-3 top-3" src="/search.svg" alt="Поиск" />
         <input
           @input="onChangeSearchInput"
-          class="border rounded-md py-2 pl-11 pr-4 outline-none focus:border-gray-400"
+          class="border rounded-md py-2 pl-8 pr-4 outline-none focus:border-gray-400 w-[200px]"
           type="search"
           placeholder="Поиск..."
         />

@@ -6,18 +6,18 @@ const emit = defineEmits(['openDrawer'])
 </script>
 
 <template>
-  <header class="flex justify-between border-b border-slate-200 px-10 py-8">
+  <header class="flex flex-row flex-wrap justify-between border-b border-slate-200 px-10 py-8 gap-8">
     <router-link to="/"
       ><div class="flex items-center gap-4">
         <img src="/logo.png" alt="Logo" class="w-10" />
         <div>
-          <h2 class="text-xl font-bold uppercase">Sneakers</h2>
-          <p class="text-slate-400">Магазин лучших кроссовок</p>
+          <h2 class="text-xl font-bold uppercase">STREET BEAT</h2>
+          <p class="text-slate-400">Сеть мультибрендовых магазинов одежды, обуви и аксессуаров</p>
         </div>
       </div></router-link
     >
 
-    <ul class="flex items-center gap-10">
+    <ul class="flex flex-row flex-wrap items-center gap-10">
       <li
         @click="() => emit('openDrawer')"
         class="flex items-center gap-3 text-gray-500 hover:text-black cursor-pointer"

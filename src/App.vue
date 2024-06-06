@@ -54,7 +54,7 @@ provide('cart', {
   />
   <div class="w-4/5 bg-white m-auto rounded-xl shadow-xl mt-14">
     <Header :total-price="totalPrice" @open-drawer="openDrawer" />
-    <div class="p-10">
+    <div class="p-4 lg:p-10 bg-slate-100">
       <router-view></router-view>
     </div>
   </div>
